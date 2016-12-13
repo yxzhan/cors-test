@@ -52,6 +52,17 @@
 
     </section>
 
-  
+    <script>
+    function postLevel(ln,st){
+    var postUrl = remoteUrl + '/s/json?func=getLevel'
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange=function(){
+       console.log(xmlhttp.status)
+    };
+    xmlhttp.open("GET",postUrl,true);
+    xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    xmlhttp.send();
+}
+    </script>
   </body>
 </html>
